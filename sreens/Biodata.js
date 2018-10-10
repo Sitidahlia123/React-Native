@@ -11,11 +11,15 @@ import { StackNavigator } from 'react-navigation';
       />
       <TextInput
       style={styles.inputBox}
-      placeholder="Email atau Nomor Telepon"
+      underlineColorAndroid='rgba(0,0,0,0)'
+      placeholder="Email"
+      palceholderTextColor="#ffffff"
       />
       <TextInput style={styles.inputBox}
+      underlineColorAndroid='rgba(0,0,0,0)'
       placeholder="Password"
-      secureTextEntry={true} //sandinya jadi titik-titik
+      secureTextEntry={true}
+      palceholderTextColor ="#ffffff" //sandinya jadi titik-titik
       />
       <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('Details')}>
           <Text style={styles.buttonText}>MASUK</Text>
@@ -32,54 +36,60 @@ import { StackNavigator } from 'react-navigation';
     flex:1,
     backgroundColor: '#ffffff',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    backgroundColor: '#e57373'
   },
   inputBox: {
-    width:250,
-    fontSize: 13,
-    color:'#000000'
+    width:300,
+    backgroundColor:'rgba(255,255,255,0.3)',
+    borderRadius:25,
+    paddingHorizontal:30,
+    fontSize:16,
+    color:'#ffffff',
+    marginVertical:10,
   },
    button:{
-    width:250,
-    height: 40,
-    alignItems: 'center',
-    justifyContent:'center',
-    backgroundColor: '#3B5998',
-    marginVertical: 10,
-    paddingHorizontal: 80
+     width:300,
+     backgroundColor:'#af4448',
+     borderRadius:25,
+     marginVertical:10,
+     paddingVertical:13,
+     alignItems: 'center',
+     justifyContent:'center',
 
   },
    buttonText:{
-    fontSize: 13,
-    color:'#f7f7f7',
+     fontSize: 13,
+     color:'#f7f7f7',
 
   },
   welcome: {
-    fontSize: 20,
+    fontSize: 25,
     textAlign: 'center',
     margin: 10,
-    color: '#04048e',
+    color: '#ffffff',
   },
   instructions: {
     textAlign: 'center',
-    color: '#04048e',
-    marginBottom: 5,
+    color: '#ffffff',
+    marginBottom: 8,
   },
 })
  class DetailsScreen extends Component {
     render() {
         return (
           <View style={styles.container}>
+          <Image
+            style={{width:200, height:200}}
+            source ={require('./1.png')} />
             <Text style={styles.welcome}>BIODATA!</Text>
             <Text style={styles.instructions}>Nama : Siti Dahlia</Text>
             <Text style={styles.instructions}>Kelas : XI RPL 1</Text>
-            <Text style={styles.instructions}>No Absen : 36</Text>
-            <Image
-          style={{width:200, height:200}}
-          source ={require('./1.png')} />
+            <Text style={styles.instructions}>No Absen : 36 </Text>
           </View>
         )}
 }
+
   const RootStack = StackNavigator ({
       Home : HomeScreen,
       Details : DetailsScreen,

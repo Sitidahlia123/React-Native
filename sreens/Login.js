@@ -5,7 +5,7 @@ import {  Platform,  StyleSheet,  Text,  View,  Image, TextInput, TouchableOpaci
     return(
       <View style={styles.container}>
       <Image
-      style={{width:100, height:100}}
+      style={{width:100, height:50}}
       source={require('./1.png')}
       />
       <TextInput
