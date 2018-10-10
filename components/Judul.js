@@ -4,7 +4,7 @@ import {Text} from 'react-native';
     render(){
         return (
             <Text style={salon.model}
-            >BIODATA</Text>
+            >{this.props.title}</Text>
          )
     }
 }

@@ -26,7 +26,9 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-      <Judul/>
+      <Judul title="Bidata"/>
+      <Judul title="Diri"/>
+      <Judul title="Saya"/>
       <Image style={{width:100, height:100}}
         source={require('./1.png')} />
         <Text style={styles.welcome}>
