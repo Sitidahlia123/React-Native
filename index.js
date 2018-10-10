@@ -1,4 +1,4 @@
 import { AppRegistry } from 'react-native';
-import Login from './sreens/Login';
+import Biodata from './sreens/Biodata';
 
-AppRegistry.registerComponent('Haloo', () => Login);
+AppRegistry.registerComponent('Haloo', () => Biodata);
